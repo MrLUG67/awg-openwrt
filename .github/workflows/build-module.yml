@@ -18,7 +18,6 @@ jobs:
             subtarget: filogic
             vermagic: "6a9e125268c43e0bae8cecb014c8ab03-r1"
            
-
     steps:
       - uses: actions/checkout@v4
         with:
