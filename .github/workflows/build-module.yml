@@ -56,6 +56,8 @@ jobs:
           echo "CONFIG_PACKAGE_kmod-crypto-chacha20poly1305=m" >> .config
 
           make defconfig
+          echo 'CONFIG_LOCALVERSION="-r1"' >> .config
+          make olddefconfig
 
           echo "    > make tools/install"
           make tools/install -i -j `nproc`
