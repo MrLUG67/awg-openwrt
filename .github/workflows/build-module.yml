@@ -69,7 +69,7 @@ jobs:
 
           # compile kernel module
           echo "    > make target/linux/compile"
-          make target/linux/compile  -i -j `nproc` V=s
+          make KERNEL_LOCALVERSION="-r1" target/linux/compile -i -j `nproc` V=s
 
           VERMAGIC=`cat ./build_dir/target-*/linux-*/linux-*/.vermagic`
           VERMAGIC_EXPECTED=${{ matrix.build_env.vermagic }}
